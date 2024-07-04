@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <title>Praktikum Web | Visit Jogja</title>
+  <link href="css/bootstrap.css" rel="stylesheet" />
+  <link href="css/magnific-popup.css" rel="stylesheet" />
+</head>
+
+<body>
+  <header>
+    <div class="main-nav">
+      <div class="nav">
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="secondpage.html">Division</a></li>
+            <li><a href="thridpage.html">About Us</a></li>
+            <li><a href="fourthpage.html">Developer</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <section id="hero">
+    <div class="container_hero">
+      <div class="destination__container">
+        <div class="socials">
+          <span><i class="ri-twitter-fill"></i></span>
+          <span><i class="ri-facebook-fill"></i></span>
+          <span><i class="ri-instagram-line"></i></span>
+          <span><i class="ri-youtube-fill"></i></span>
+        </div>
+        <div class="content">
+          <h1>MBC<br /><span>LABORATORY</span></h1>
+          <p>
+            MBC Laboratory adalah salah satu laboratorium diatas naungan KK NCM yang mempelajari mengenai Cyber Security, Big data, Game Tech, dan Geographic Information System. Laboratorium ini terbentuk pada 4 Oktober 2019.
+          </p>
+          <a href="secondpage.html"><button class="btn">Next Page </button></a>
+        </div>
+        <div class="video-container">
+          <video controls class="hero-video">
+            <source src="gambar/bahan main page.mp4" type="video/mp4">
+            Browser Anda tidak mendukung tag video.
+          </video>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  
+
+
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const buttons = document.querySelectorAll('.button');
+      const cards = document.querySelectorAll('.blogs__card');
+      // Fungsi untuk mengatur tampilan kartu berdasarkan filter
+      function filterCards(filter) {
+        cards.forEach(card => {
+          if (card.classList.contains(filter)) {
+            card.style.display = 'block'; // Menampilkan kartu yang cocok
+          } else {
+            card.style.display = 'none'; // Menyembunyikan kartu yang tidak cocok
+          }
+        });
+      }
+      buttons.forEach(button => {
+        button.addEventListener('click', function() {
+          const filter = this.getAttribute('data-filter').substring(
+            1); // Menghapus titik dari kelas untuk pencocokan
+          // Menghapus kelas 'active' dari semua tombol dan menambahkannya ke tombol yang diklik
+          buttons.forEach(btn => btn.classList.remove('active'));
+          this.classList.add('active');
+          // Memanggil fungsi filterCards dengan filter yang sesuai
+          filterCards(filter);
+        });
+      });
+      // Menetapkan tombol Hotel sebagai default dan memicu klik pada saat load
+      const defaultButton = document.querySelector('.button[data-filter=".Hotel"]');
+      defaultButton.classList.add('active');
+      filterCards('Hotel'); // Memanggil fungsi untuk menampilkan hanya hotel
+    });
+  </script>
+
+<script src="ScrollReveal.js"></script>
+
+<script src="https://unpkg.com/scrollreveal"></script>
+<script src="main.js"></script>
+
+<script src="js/jquery.min.js"></script>
+<!-- jQuery for Bootstrap's JavaScript plugins -->
+<script src="js/popper.min.js"></script>
+<!-- Popper tooltip library for Bootstrap -->
+<script src="js/bootstrap.min.js"></script>
+<!-- Bootstrap framework -->
+<script src="js/jquery.easing.min.js"></script>
+<!-- jQuery Easing for smooth scrolling between anchors -->
+<script src="js/swiper.min.js"></script>
+<!-- Swiper for image and text sliders -->
+<script src="js/jquery.magnific-popup.js"></script>
+<!-- Magnific Popup for lightboxes -->
+<script src="js/morphext.min.js"></script>
+<!-- Morphtext rotating text in the header -->
+<script src="js/isotope.pkgd.min.js"></script>
+<!-- Isotope for filter -->
+<script src="js/validator.min.js"></script>
+<!-- Validator.js - Bootstrap plugin that validates forms -->
+<script src="js/scripts.js"></script>
+<!-- Custom scripts -->
+</body>
+
+</html>

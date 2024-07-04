@@ -1,0 +1,449 @@
+@import url('https://fonts.googleapis.com/css2?family=Caudex:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+/*font-family: 'Caudex', sans-serif;*/
+
+* {
+    scroll-behavior: smooth;
+    
+}
+
+
+  
+
+
+
+@keyframes rotate-gradient {
+    0% {
+      background-position: 0% 0%;
+    }
+    100% {
+      background-position: 0% 100%;
+    }
+  }
+
+header {
+    align-items: center;
+    
+    
+}
+
+h1, h3{
+    color:black;
+}
+
+p{
+    color: black;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+  
+}
+
+
+.main-nav {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000; 
+  }
+  .nav {
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+    position: fixed;
+    width: 100%;
+    align-items: center;
+    border-radius: 50px 50px;
+    border: 0px solid rgba(255, 255, 255, 0.1);
+    transition: backdrop-filter 2.5s ease;
+    backdrop-filter: blur(20px);
+    max-width: 490px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    transition: transform 0.6s ease, border 0.6s ease, backdrop-filter 0.6s ease;
+    border: none;
+  }
+  
+  nav {
+    position: relative;
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 1rem;
+    z-index: 100;
+  }
+  
+  .nav.scrolled {
+    transform: translateY(10px);
+    border: 0px solid rgba(35, 46, 53, 0.1);
+    
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+  }
+  
+  nav ul li a {
+    color: black;
+    text-decoration: none;
+  }
+  
+  nav ul li :hover {
+    color:#91A368;
+    transition: 0.8s ease;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  nav ul li a::after {
+    content: ''; /* Menambahkan konten kosong untuk pseudo-element */
+    position: absolute; /* Menjadikan posisi absolut */
+    bottom: -2px; /* Menempatkan pseudo-element di bawah teks */
+    left: 0; /* Menempatkan pseudo-element di sebelah kiri */
+    width: 0; /* Mulai dengan lebar 0 */
+    height: 2px; /* Ketebalan garis */
+    background-color:#91A368; /* Warna garis */
+    transition: width 0.8s ease; /* Transisi lebar dengan efek lambat */
+    
+  }
+  
+  nav ul li a:hover::after {
+    width: 100%; /* Membuat lebar pseudo-element menjadi 100% saat hover */
+  }
+  
+
+.title {
+    font-size: 3rem;
+    text-align: center;
+    margin: 0;
+    line-height: 1.2;
+    margin-top: 40px;
+    font-family: "Poppins", sans-serif;
+    
+}
+
+
+#hero {
+    transition: all 2s;
+    padding: 50px 0;
+}
+
+@media(prefers-reduced-motion) {
+    #aboutme{
+        transition: none;
+    }
+}
+
+.main-hero {
+    text-align: center;
+}
+
+.hero-text {
+    font-size: 36px;
+    color: #333;
+}
+
+.main-hero img {
+    max-width: 20%;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 170px 170px 0px 0px;
+}
+
+
+
+.hero-spotify {
+    margin-top: 20px;
+}
+
+.hero-spotify img {
+    width: 100px;
+    height: auto;
+}
+
+.border-spotify {
+    border-top: 2px solid #333;
+    margin-top: 20px;
+}
+
+.section-container {
+    display: flex;
+    gap: 4rem;
+    height: 80%;
+}
+
+#aboutme {
+    padding-top: 4vh;
+    height: 96vh;
+    margin: 10px 10rem 10rem;
+    box-sizing: border-box;
+    min-height: fit-content;
+}
+
+.section__pic-container {
+    display: flex;
+    height: 400px;
+    width: 400px;
+    margin: auto 0;
+}
+
+.section__text {
+    align-self: center;
+    text-align: center;
+}
+
+.section__text p {
+    font-weight: 600;
+}
+
+.section__text__p1 {
+    text-align: center;
+}
+
+.icon {
+    cursor: pointer;
+    height: 2rem;
+}
+
+.about-containers {
+    gap: 2rem;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+  }
+
+.about-details-container {
+    justify-content: center;
+    flex-direction: column;
+    
+}
+
+.about-containers,
+.about-details-container {
+    display: flex;
+}
+
+.about-pic {
+    border-radius: 2rem;
+}
+
+.arrow {
+    position: absolute;
+    right: 40px;
+    
+  }
+
+  .details-container {
+    padding: 1.5rem;
+    flex: 1;
+    background:darkgray;
+    border-radius: 2rem;
+    border: rgb(53, 53, 53) 0.1rem solid;
+    border-color: darkgray;
+    text-align: center;
+    
+  }
+
+.section-container {
+    gap: 4rem;
+    height: 80%;
+}
+
+.section__pic-container {
+    height: 400px;
+    width: 400px;
+    margin: auto 0;
+}
+
+
+
+/* #experience {
+    padding-top: 4vh;
+    height: 96vh;
+    margin: 0 10rem;
+    box-sizing: border-box;
+    min-height: fit-content;
+  }
+  
+  .experience-sub-title {
+    color: rgb(85, 85, 85);
+    font-weight: 600;
+    font-size: 1.75rem;
+    margin-bottom: 2rem;
+  }
+  
+  .experience-details-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  .article-container {
+    display: flex;
+    text-align: initial;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 2.5rem;
+    justify-content: space-around;
+  }
+  
+  article {
+    display: flex;
+    width: 8rem;
+    justify-content: space-around;
+    gap: 0.5rem;
+  }
+  
+  article .icon {
+    cursor: default;
+  }
+
+  .work {
+    color: #000000;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+  
+
+.my-work {
+    margin: 0;
+    font-size: 2rem;
+    line-height: 1.2;
+    margin-top: 90px;
+    font-family: "Poppins", sans-serif; 
+}
+
+.main-content {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.section-title {
+    margin: 0;
+    font-size: 2rem;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.work-description {
+    font-size: 12px;
+    text-align: right;
+    margin-right: -10%;
+    margin-left: auto;
+}
+
+.work-item {
+    padding: 20px;
+    margin-bottom: 40px;
+    border-radius: 10px;
+    transition: opacity 1s ease;
+}
+
+.work-item img {
+    width: 100%;
+    border-radius: 10px 10px 10px 10px;
+    margin-bottom: 20px;
+    transition: transform 0.9s ease;
+}
+
+.work-item img:hover {
+    transform: scale(0.9);
+}
+
+.work-title {
+    font-size: 12px;
+    text-align: left;
+    margin-right: auto;
+    margin-left: -10%;
+}
+
+.text-main-skills {
+    font-size: 60px;
+    margin-left: 20%;
+}
+
+.text-second-skills {
+    font-size: 24px;
+    margin-left: 23%;
+}
+
+.skills-description {
+    font-size: 14px;
+    margin-left: 23%;
+}
+
+.software-skills {
+    font-size: 24px;
+    text-align: right;
+    margin-right: 10%;
+    margin-left: auto;
+    margin-top: -11.3%;
+}
+
+.software-skills img {
+    width: 10%;
+}
+
+.main-testimoni {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 1000px;
+    padding: 80px;
+    background-color: rgb(130, 157, 140);
+}
+
+.text-title-testimoni {
+    font-size: 42px;
+}
+
+.testimoni-content {
+    position: relative;
+}
+
+.text-testimoni {
+    margin-top: 90px;
+    font-size: 40px;
+    line-height: 1.4;
+    margin-bottom: 90px;
+    position: relative;
+    z-index: 1;
+}
+
+.kutip {
+    position: absolute;
+    width: 30%;
+    margin-right: auto;
+    top: -30%;
+    right: 0;
+    left: -5%;
+    bottom: 20px;
+}
+
+.skills-img :hover {
+    transform: scale(0.9);
+    transition: transform 0.6s ease;
+}
+
+.button {
+
+    padding: 10px 46px;
+    border: 1px solid #000000;
+    border-radius: 14px;
+    background-color: transparent;
+    color: #000;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.button:hover {
+    background-color: #000;
+    color: #fff;
+} */
